@@ -34,6 +34,7 @@ PPD teleports your display entities into your head and sets their `translation` 
 - The display entities receive the light from your head position, so it may look off at times.
 - PPD uses the translation field to achieve the per-player visibility. This means that all translations need to be combined with the marker's destination Pos. **Interpolated transformations are not possible!**
 - The display entity's `Rotation` must not be changed. Use the `left_rotation` and `right_rotation` transformations instead.
+- The display entities are not visible in F5.
 
 ## Credit
 From CMDred:
