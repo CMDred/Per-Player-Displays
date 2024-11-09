@@ -32,7 +32,7 @@ PPD teleports your display entities into your head and sets their `translation` 
 - If another player stands very close to you, they may be able to see your display entities.
 - Player scales above 1.0 are currently not supported and may cause flickering when crouching and uncrouching.
 - The display entities receive the light from your head position, so it may look off at times.
-- PPD uses the translation field to achieve the per-player visibility. This means that all translations need to be combined with the marker's destination Pos. **Interpolated translations are not possible.**
+- PPD uses the translation field to achieve the per-player visibility. This means that all translations need to be combined with the marker's destination Pos. **Interpolated transformations are not possible!**
 - The display entity's `Rotation` must not be changed. Use the `left_rotation` and `right_rotation` transformations instead.
 
 ## Credit
