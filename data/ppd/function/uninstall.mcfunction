@@ -9,7 +9,7 @@ execute unless score #ppd.Init StringLib.Uninstall matches 1 run return run scor
 scoreboard objectives remove ppd.Uninstall
 
 # Tellraw
-tellraw @s ["",{"text":"Per-Player Displays >> ","color":"#C1EA53"},"Uninstalled PPD (v1.0.0)"]
+tellraw @s ["",{"text":"Per-Player Displays >> ","color":"#C1EA53"},"Uninstalled PPD (v1.0.1)"]
 
 # Remove scoreboards & data storages
 scoreboard objectives remove ppd
