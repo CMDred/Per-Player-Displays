@@ -20,7 +20,7 @@ execute if entity @s[tag=ppd.TooFar] run function ppd:zprivate/display/distance_
 # Apply the calculated translation
 data modify entity @s transformation.translation set from storage ppd:zprivate data.translation
 
-# Take player movement into account
+# Adjust the view_range depending on the player's speed
 scoreboard players set #ppd ppd.ViewRange 0
 execute on passengers on origin if predicate ppd:movement/1 run scoreboard players set #ppd ppd.ViewRange 1
 execute on passengers on origin if predicate ppd:movement/2 run scoreboard players set #ppd ppd.ViewRange 2
