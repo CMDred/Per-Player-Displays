@@ -22,8 +22,9 @@ A detailed description can be found in the `ppd:how_to` function.
 PPD teleports your display entities into your head and sets their `translation` transformation accordingly so their models still appear at the desired location. It also sets their `view_range` NBT optimally to ensure that nobody else can see them, while also avoiding flickering if you move too fast.
 
 ## Good to know
-- The display entity will only be displayed in the dimension it's summoned in.
-- The display entity will stay while the player is offline, but it won't be visible.
+- Display entities will only be displayed in the dimension it's summoned in.
+- Display entities will stay while the player is offline, but it won't be visible.
+- Display entities will not display farther than 160 blocks away from the destination position.
 
 ## Caveats
 - This data pack is affected by the `Entity Distance` graphics setting. The numbers (adjustable in `ppd:zprivate/display/view_range`) were made with an Entity Distance of 100% in mind. A lower setting may cause flickering, while a higher setting may allow you to see other players' displays from a greater distance.
@@ -35,6 +36,7 @@ PPD teleports your display entities into your head and sets their `translation` 
 - The display entity's `Rotation` must not be changed. Use the `left_rotation` and `right_rotation` transformations instead.
 - The display entities are not visible in F5.
 - PPD doesn't work more than 100,000 blocks out in each axis.
+- If the player is teleported to a far away chunk and it unloads before the display entities can teleport to the player, the entity can get stuck there, so the displays no longer show up for that player.
 
 ## Credit
 From CMDred:
