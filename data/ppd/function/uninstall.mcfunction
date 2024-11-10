@@ -14,6 +14,7 @@ tellraw @s ["",{"text":"Per-Player Displays >> ","color":"#C1EA53"},"Uninstalled
 # Remove scoreboards & data storages
 scoreboard objectives remove ppd
 scoreboard objectives remove ppd.ViewRange
+scoreboard objectives remove ppd.ViewRangeBuffer
 scoreboard objectives remove ppd.ID
 scoreboard objectives remove ppd.Pos.0
 scoreboard objectives remove ppd.Pos.1

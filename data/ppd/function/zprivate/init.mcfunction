@@ -7,6 +7,7 @@ scoreboard objectives add ppd.ID dummy
 scoreboard objectives add ppd.Pos.0 dummy
 scoreboard objectives add ppd.Pos.1 dummy
 scoreboard objectives add ppd.Pos.2 dummy
+scoreboard objectives add ppd.ViewRangeBuffer trigger
 
 data modify storage ppd:zprivate data.translation set value [0.0d,0.0d,0.0d]
 

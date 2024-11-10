@@ -20,4 +20,4 @@ execute if entity @s[tag=ppd.TooFar] run function ppd:zprivate/display/distance_
 data modify entity @s transformation.translation set from storage ppd:zprivate data.translation
 
 # Adjust the view_range depending on the player's speed
-execute unless score @s ppd.ViewRange = #ppd ppd.ViewRange run function ppd:zprivate/display/view_range
+execute unless score @s ppd.ViewRange = #ppd ppd.ViewRange run function ppd:zprivate/display/view_range with storage ppd:zprivate data

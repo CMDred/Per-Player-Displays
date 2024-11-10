@@ -1,3 +1,7 @@
+# ViewRangeBuffer Setting
+scoreboard players enable @a ppd.ViewRangeBuffer
+execute as @a unless score @s ppd.ViewRange = @s ppd.ViewRangeBuffer run function ppd:zprivate/settings/change_view_range
+
 # Assign IDs (Not using an advancement because of the uninstalling process)
 execute as @a unless score @s ppd.ID matches 1.. store result score @s ppd.ID run scoreboard players add #ppd ppd.ID 1
 
