@@ -6,4 +6,4 @@ execute on origin run tag @s remove ppd.Origin
 
 # Check if the player's eyes moved since the last tick
 execute on origin at @s anchored eyes rotated ~ 0 run tp 80-0-0-0-80 ^ ^0.1 ^
-execute positioned as 80-0-0-0-80 unless entity @s[distance=..0.001] on vehicle run function ppd:zprivate/display/update
+execute on vehicle run function ppd:zprivate/display/update
