@@ -2,10 +2,9 @@
 execute positioned as 80-0-0-0-80 run tp @s ~ ~ ~
 
 # Calculate the display entity translation
-data modify storage ppd:zprivate data.SPos set from entity 80-0-0-0-80 Pos
-execute store result score #ppd ppd.Pos.0 run data get storage ppd:zprivate data.SPos[0] -10000
-execute store result score #ppd ppd.Pos.1 run data get storage ppd:zprivate data.SPos[1] -10000
-execute store result score #ppd ppd.Pos.2 run data get storage ppd:zprivate data.SPos[2] -10000
+scoreboard players operation #ppd ppd.Pos.0 = #ppd.Current ppd.Pos.0
+scoreboard players operation #ppd ppd.Pos.1 = #ppd.Current ppd.Pos.1
+scoreboard players operation #ppd ppd.Pos.2 = #ppd.Current ppd.Pos.2
 
 execute store result storage ppd:zprivate data.translation[0] double 0.0001 run scoreboard players operation #ppd ppd.Pos.0 += @s ppd.Pos.0
 execute store result storage ppd:zprivate data.translation[1] double 0.0001 run scoreboard players operation #ppd ppd.Pos.1 += @s ppd.Pos.1
@@ -21,11 +20,4 @@ execute if entity @s[tag=ppd.TooFar] run function ppd:zprivate/display/distance_
 data modify entity @s transformation.translation set from storage ppd:zprivate data.translation
 
 # Adjust the view_range depending on the player's speed
-scoreboard players set #ppd ppd.ViewRange 0
-execute on passengers on origin if predicate ppd:movement/1 run scoreboard players set #ppd ppd.ViewRange 1
-execute on passengers on origin if predicate ppd:movement/2 run scoreboard players set #ppd ppd.ViewRange 2
-execute on passengers on origin if predicate ppd:movement/3 run scoreboard players set #ppd ppd.ViewRange 3
-execute on passengers on origin if predicate ppd:movement/4 run scoreboard players set #ppd ppd.ViewRange 4
-execute on passengers on origin if predicate ppd:movement/5 run scoreboard players set #ppd ppd.ViewRange 5
-execute on passengers on origin if predicate ppd:movement/6 run scoreboard players set #ppd ppd.ViewRange 6
 execute unless score @s ppd.ViewRange = #ppd ppd.ViewRange run function ppd:zprivate/display/view_range

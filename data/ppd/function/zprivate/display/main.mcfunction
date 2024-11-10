@@ -4,6 +4,7 @@ execute unless entity @a[tag=ppd.Origin,x=0,limit=1] run return run execute unle
 execute if entity @s[tag=ppd.NoPlayer] run function ppd:zprivate/display/player_online
 execute on origin run tag @s remove ppd.Origin
 
-# Check if the player's eyes moved since the last tick
+# Update the display entity's translation & view_range
 execute on origin at @s anchored eyes rotated ~ 0 run tp 80-0-0-0-80 ^ ^0.1 ^
+execute on origin unless score @s ppd.ID = #ppd.Current ppd.ID run function ppd:zprivate/display/get_player_data
 execute on vehicle run function ppd:zprivate/display/update
