@@ -22,6 +22,7 @@ A detailed description can be found in the `ppd:how_to` function.
 PPD teleports your display entities into your head and sets their `translation` transformation accordingly so their models still appear at the desired location. It also sets their `view_range` NBT optimally to ensure that nobody else can see them, while also avoiding flickering if you move too fast.
 
 ## Good to know
+- There is a `ppd.ViewRangeBuffer` trigger score that players can use to account for flickering during server lag or high ping. The higher it is set, the bigger the radius in which other players can see your display.
 - Display entities will only be displayed in the dimension it's summoned in.
 - Display entities will stay while the player is offline, but it won't be visible.
 - Display entities will not display farther than 160 blocks away from the destination position.
