@@ -27,6 +27,8 @@ scoreboard players reset #ppd.ShowLoadMessage
 scoreboard players reset #ppd.Online
 scoreboard players reset #ppd.Success
 scoreboard players reset * ppd.ID
+scoreboard players reset * ppd.ViewRange
+scoreboard players reset * ppd.ViewRangeBuffer
 
 data remove storage ppd:zprivate data
 
