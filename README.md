@@ -10,14 +10,13 @@ A detailed description can be found in the `ppd:how_to` function.
 1. Create the following entity stack:
     - Display Entity
     - Area Effect Cloud
-    - Marker
 2. Required data:
     - Display Entity: `{view_range:0.003f}`
     - Area Effect Cloud: `{Radius:0f,RadiusOnUse:-1f,Duration:2147483647,Owner:[<Your UUID>],Tags:["ppd"]}`
-    - Marker: `{data:{Pos:[<Destination position of the display entity>]}}`
+3. Set the display entity's `ppd.Pos.<0,1,2>` scores, scaled up by 10,000x.
 
 **Example**:\
-`summon minecraft:block_display ~ ~ ~ {block_state:{Name:"minecraft:iron_block"},view_range:0.003f,Passengers:[{id:"minecraft:area_effect_cloud",Radius:0f,RadiusOnUse:-1f,Duration:2147483647,Owner:[I;1101629270,-853851629,-1258987245,63230154],Tags:["ppd"]},{id:"minecraft:marker",data:{Pos:[0.0d,0.0d,0.0d]}}]}`
+`summon minecraft:block_display ~ ~ ~ {block_state:{Name:"minecraft:iron_block"},view_range:0.003f,Passengers:[{id:"minecraft:area_effect_cloud",Radius:0f,RadiusOnUse:-1f,Duration:2147483647,Owner:[I;1101629270,-853851629,-1258987245,63230154],Tags:["ppd"]}]}`
 
 ## How it works
 PPD teleports your display entities into your head and sets their `translation` transformation accordingly so their models still appear at the desired location. It also sets their `view_range` NBT optimally to ensure that nobody else can see them, while also avoiding flickering if you move too fast.
@@ -35,6 +34,7 @@ PPD teleports your display entities into your head and sets their `translation` 
 - PPD uses the translation field to achieve the per-player visibility. This means that all translations need to be combined with the marker's destination Pos. **Interpolated transformations are not possible!**
 - The display entity's `Rotation` must not be changed. Use the `left_rotation` and `right_rotation` transformations instead.
 - The display entities are not visible in F5.
+- PPD doesn't work more than 100,000 blocks out in each axis.
 
 ## Credit
 From CMDred:
