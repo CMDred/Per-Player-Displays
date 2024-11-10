@@ -1,5 +1,5 @@
 {
   "values": [
-    "ppd:zprivate/load"
+    "#load:_private/load"
   ]
 }
