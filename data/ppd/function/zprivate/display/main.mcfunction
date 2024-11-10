@@ -1,6 +1,6 @@
 # Check if the player is offline or in a different dimension
 execute on origin run tag @s add ppd.Origin
-execute at @s unless entity @a[tag=ppd.Origin,x=0,limit=1] run return run execute unless entity @s[tag=ppd.NoPlayer] run function ppd:zprivate/display/player_offline
+execute unless entity @a[tag=ppd.Origin,x=0,limit=1] run return run execute unless entity @s[tag=ppd.NoPlayer] run function ppd:zprivate/display/player_offline
 execute if entity @s[tag=ppd.NoPlayer] run function ppd:zprivate/display/player_online
 execute on origin run tag @s remove ppd.Origin
 
