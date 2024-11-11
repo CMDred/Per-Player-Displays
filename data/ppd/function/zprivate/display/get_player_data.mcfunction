@@ -6,13 +6,17 @@ execute store result score #ppd.Current ppd.Pos.0 run data get storage ppd:zpriv
 execute store result score #ppd.Current ppd.Pos.1 run data get storage ppd:zprivate data.SPos[1] -10000
 execute store result score #ppd.Current ppd.Pos.2 run data get storage ppd:zprivate data.SPos[2] -10000
 
-# Get the ViewRange
-scoreboard players set #ppd ppd.ViewRange 30
-execute if predicate ppd:movement/1 run scoreboard players set #ppd ppd.ViewRange 50
-execute if predicate ppd:movement/2 run scoreboard players set #ppd ppd.ViewRange 70
-execute if predicate ppd:movement/3 run scoreboard players set #ppd ppd.ViewRange 120
-execute if predicate ppd:movement/4 run scoreboard players set #ppd ppd.ViewRange 170
-execute if predicate ppd:movement/5 run scoreboard players set #ppd ppd.ViewRange 215
-execute if predicate ppd:movement/6 run scoreboard players set #ppd ppd.ViewRange 320
+# Update the view_range
+scoreboard players set #ppd ppd.ViewRange 20000
 
-execute store result storage ppd:zprivate data.ViewRange float 0.0001 run scoreboard players operation #ppd ppd.ViewRange += @s ppd.ViewRange
+execute if predicate ppd:movement/1 run scoreboard players set #ppd ppd.ViewRange 30000
+execute if predicate ppd:movement/2 run scoreboard players set #ppd ppd.ViewRange 41000
+execute if predicate ppd:movement/3 run scoreboard players set #ppd ppd.ViewRange 68000
+execute if predicate ppd:movement/4 run scoreboard players set #ppd ppd.ViewRange 99000
+execute if predicate ppd:movement/5 run scoreboard players set #ppd ppd.ViewRange 135000
+execute if predicate ppd:movement/6 run scoreboard players set #ppd ppd.ViewRange 225000
+
+execute store result score #ppd.Scale ppd run attribute @s minecraft:scale get 11000
+execute if score #ppd.Scale ppd matches 11001.. run function ppd:zprivate/display/scale
+
+execute store result storage ppd:zprivate data.ViewRange float 0.000000001 run scoreboard players operation #ppd ppd.ViewRange *= @s ppd.ViewRange

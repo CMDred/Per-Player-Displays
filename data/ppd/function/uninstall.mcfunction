@@ -9,12 +9,12 @@ execute unless score #ppd.Init ppd.Uninstall matches 1 run return run scoreboard
 scoreboard objectives remove ppd.Uninstall
 
 # Tellraw
-tellraw @s ["",{"text":"Per-Player Displays >> ","color":"#C1EA53"},"Uninstalled PPD (v1.1.1)"]
+tellraw @s ["",{"text":"Per-Player Displays >> ","color":"#C1EA53"},"Uninstalled PPD (v1.2.0)"]
 
 # Remove scoreboards & data storages
 scoreboard objectives remove ppd
 scoreboard objectives remove ppd.ViewRange
-scoreboard objectives remove ppd.ViewRangeBuffer
+scoreboard objectives remove ppd.ViewRangeMultiplier
 scoreboard objectives remove ppd.ID
 scoreboard objectives remove ppd.Pos.0
 scoreboard objectives remove ppd.Pos.1
@@ -26,9 +26,10 @@ scoreboard players reset #ppd.Current
 scoreboard players reset #ppd.ShowLoadMessage
 scoreboard players reset #ppd.Online
 scoreboard players reset #ppd.Success
+scoreboard players reset #ppd.Scale
 scoreboard players reset * ppd.ID
 scoreboard players reset * ppd.ViewRange
-scoreboard players reset * ppd.ViewRangeBuffer
+scoreboard players reset * ppd.ViewRangeMultiplier
 
 data remove storage ppd:zprivate data
 
