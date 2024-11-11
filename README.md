@@ -22,14 +22,12 @@ A detailed description can be found in the `ppd:how_to` function.
 PPD teleports your display entities into your head and sets their `translation` transformation accordingly so their models still appear at the desired location. It also sets their `view_range` NBT optimally to ensure that nobody else can see them, while also avoiding flickering if you move too fast.
 
 ## Good to know
-- There is a `ppd.ViewRangeMultiplier` trigger score that players can use to account for flickering during server lag or high ping. The higher it is set, the bigger the radius in which other players can see your display.
+- High ping, bad server performance or the `Entity Distance` graphics setting can impact the visibility of displays. This can be counteracted by the user by running `/trigger ppd.ViewRangeMultiplier set ...`. The higher it is set, the bigger the range for other players to see your display entities.
 - Display entities will only be displayed in the dimension it's summoned in.
 - Display entities will stay while the player is offline, but it won't be visible.
 - Display entities will not display farther than 160 blocks away from the destination position.
 
 ## Caveats
-- This data pack is affected by the `Entity Distance` graphics setting. The numbers (adjustable in `ppd:zprivate/display/view_range`) were made with an Entity Distance of 100% in mind. A lower setting may cause flickering, while a higher setting may allow you to see other players' displays from a greater distance.
-- High ping or bad server performance may cause flickering. This can be counteracted by the user by running `/trigger ppd.ViewRangeMultiplier set ...`.
 - If another player stands very close to you, they may be able to see your display entities.
 - The display entities receive the light from your head position, so it may look off at times.
 - PPD uses the translation field to achieve the per-player visibility. This means that all translations need to be combined with the marker's destination Pos. **Interpolated transformations are not possible!**
