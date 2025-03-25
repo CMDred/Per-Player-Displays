@@ -4,12 +4,12 @@ execute as 80-0-0-0-80 if entity @s[tag=ppd.Root] run kill @s
 # Check if it's installed
 scoreboard objectives add ppd.Uninstall dummy
 execute if score #ppd.Init ppd matches 1 run scoreboard players set #ppd.Init ppd.Uninstall 1
-execute unless score #ppd.Init ppd.Uninstall matches 1 run tellraw @a [{"text":"Per-Player Displays >> ","color":"#C1EA53"},{"text":"⚠ Could not uninstall PPD. Is it installed?","color":"red"}]
+execute unless score #ppd.Init ppd.Uninstall matches 1 run tellraw @a [{text:"Per-Player Displays >> ",color:"#C1EA53"},{text:"⚠ Could not uninstall PPD. Is it installed?",color:"red"}]
 execute unless score #ppd.Init ppd.Uninstall matches 1 run return run scoreboard objectives remove ppd.Uninstall
 scoreboard objectives remove ppd.Uninstall
 
 # Tellraw
-tellraw @s ["",{"text":"Per-Player Displays >> ","color":"#C1EA53"},"Uninstalled PPD (v1.2.0)"]
+tellraw @s ["",{text:"Per-Player Displays >> ",color:"#C1EA53"},"Uninstalled PPD (v1.2.0)"]
 
 # Remove scoreboards & data storages
 scoreboard objectives remove ppd
