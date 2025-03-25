@@ -35,6 +35,7 @@ PPD teleports your display entities into your head and sets their `translation` 
 - The display entities are not visible in F5.
 - PPD doesn't work more than 100,000 blocks out in each axis.
 - If the player is teleported to a far away chunk and it unloads before the display entities can teleport to the player, the entity can get stuck there, so the displays no longer show up for that player.
+- Billboards other than `fixed` are not supported.
 
 ## Credit
 From CMDred:
