@@ -16,7 +16,7 @@ A detailed description can be found in the `ppd:how_to` function.
 3. Set the display entity's `ppd.Pos.<0,1,2>` scores, scaled up by 10,000x.
 
 **Example**:\
-`summon minecraft:block_display ~ ~ ~ {block_state:{Name:"minecraft:iron_block"},view_range:0.003f,Passengers:[{id:"minecraft:area_effect_cloud",Radius:0f,RadiusOnUse:-1f,Duration:2147483647,Owner:[I;1101629270,-853851629,-1258987245,63230154],Tags:["ppd"]}]}`
+`summon minecraft:block_display ~ ~ ~ {block_state:{Name:"minecraft:iron_block"},view_range:0.003f,Passengers:[{id:"minecraft:area_effect_cloud",Radius:0f,RadiusOnUse:-1f,Owner:[I;1101629270,-853851629,-1258987245,63230154],Tags:["ppd"]}]}`
 
 ## How it works
 PPD teleports your display entities into your head and sets their `translation` transformation accordingly so their models still appear at the desired location. It also sets their `view_range` NBT optimally to ensure that nobody else can see them, while also avoiding flickering if you move too fast.
