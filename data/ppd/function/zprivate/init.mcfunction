@@ -12,6 +12,6 @@ scoreboard objectives add ppd.ViewRangeMultiplier trigger
 data modify storage ppd:zprivate data.translation set value [0.0d,0.0d,0.0d]
 
 # Tellraw
-tellraw @a ["",{text:"Per-Player Displays >> ",color:"#C1EA53"},"Installed PPD (v1.2.0)"]
+tellraw @a ["",{text:"Per-Player Displays >> ",color:"#C1EA53"},"Installed PPD (v1.3.0)"]
 tellraw @a ["",{text:"Per-Player Displays >> ",color:"#C1EA53"},{text:"Click here",bold:true,color:"yellow",click_event:{action:"run_command",command:"/function ppd:debug/toggle_load_message"},hover_event:{action:"show_text",value:["/function ppd:debug/toggle_load_message"]}}," to toggle the load message"]
 execute if score #ppd.ShowLoadMessage ppd matches 1 run tellraw @a ""
