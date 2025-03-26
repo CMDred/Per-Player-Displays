@@ -11,9 +11,6 @@ scoreboard objectives remove ppd.Uninstall
 # Tellraw
 tellraw @s ["",{text:"Per-Player Displays >> ",color:"#C1EA53"},"Uninstalled PPD (v1.3.0)"]
 
-# Tag the existing ppd-entities to avoid losing them
-tag @e[type=!player,scores={ppd.ID=1..}] add ppd.Deprecated
-
 # Remove scoreboards & data storages
 scoreboard objectives remove ppd
 scoreboard objectives remove ppd.ViewRange
