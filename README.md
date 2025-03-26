@@ -5,6 +5,9 @@ For inquiries, please contact **@silicatYT** on Discord.\
 Download: [Modrinth](https://modrinth.com/datapack/per-player-displays)\
 Issue tracker: [GitHub](https://github.com/CMDred/Per-Player-Displays)
 
+## PSA (PLEASE READ)
+Due to [a bug in Minecraft's code](https://bugs.mojang.com/browse/MC/issues/MC-295859), I am currently **unable to port PPD to 1.21.5**. Any upvotes on the bugreport are greatly appreciated!
+
 ## How to use
 This description can also be found in the `ppd:how_to` function.
 1. Summon a display entity
