@@ -1,10 +1,10 @@
 scoreboard players operation #ppd.Current ppd.ID = @s ppd.ID
 
-# Get the SPos
+# Get the SPos (Starting Pos)
 data modify storage ppd:zprivate data.SPos set from entity 80-0-0-0-80 Pos
-execute store result score #ppd.Current ppd.Pos.0 run data get storage ppd:zprivate data.SPos[0] -10000
-execute store result score #ppd.Current ppd.Pos.1 run data get storage ppd:zprivate data.SPos[1] -10000
-execute store result score #ppd.Current ppd.Pos.2 run data get storage ppd:zprivate data.SPos[2] -10000
+execute store result score #ppd.Current ppd.Pos.x run data get storage ppd:zprivate data.SPos[0] -10000
+execute store result score #ppd.Current ppd.Pos.y run data get storage ppd:zprivate data.SPos[1] -10000
+execute store result score #ppd.Current ppd.Pos.z run data get storage ppd:zprivate data.SPos[2] -10000
 
 # Update the view_range
 scoreboard players set #ppd ppd.ViewRange 20000

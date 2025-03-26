@@ -1,0 +1,24 @@
+{
+	"condition": "minecraft:entity_scores",
+	"entity": "this",
+	"scores": {
+		"ppd.ID": {
+			"min": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#ppd.Search"
+				},
+				"score": "ppd.ID"
+			},
+			"max": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#ppd.Search"
+				},
+				"score": "ppd.ID"
+			}
+		}
+	}
+}

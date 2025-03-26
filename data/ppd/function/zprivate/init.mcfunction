@@ -4,9 +4,9 @@ execute unless score #ppd.ShowLoadMessage ppd matches 0 run scoreboard players s
 
 scoreboard objectives add ppd.ViewRange dummy
 scoreboard objectives add ppd.ID dummy
-scoreboard objectives add ppd.Pos.0 dummy
-scoreboard objectives add ppd.Pos.1 dummy
-scoreboard objectives add ppd.Pos.2 dummy
+scoreboard objectives add ppd.Pos.x dummy
+scoreboard objectives add ppd.Pos.y dummy
+scoreboard objectives add ppd.Pos.z dummy
 scoreboard objectives add ppd.ViewRangeMultiplier trigger
 
 data modify storage ppd:zprivate data.translation set value [0.0d,0.0d,0.0d]

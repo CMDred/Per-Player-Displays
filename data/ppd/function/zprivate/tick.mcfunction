@@ -6,7 +6,9 @@ execute as @a unless score @s ppd.ViewRangeMultiplier matches 0 run function ppd
 scoreboard players enable @a ppd.ViewRangeMultiplier
 
 # Logic
-execute as @e[type=minecraft:area_effect_cloud,tag=ppd,sort=nearest] at @s run function ppd:zprivate/display/main
+execute as @e[type=minecraft:item_display,scores={ppd.ID=1..},sort=nearest] at @s run function ppd:zprivate/display/main
+execute as @e[type=minecraft:block_display,scores={ppd.ID=1..},sort=nearest] at @s run function ppd:zprivate/display/main
+execute as @e[type=minecraft:text_display,scores={ppd.ID=1..},sort=nearest] at @s run function ppd:zprivate/display/main
 tp 80-0-0-0-80 0.0 0.0 0.0
 scoreboard players set #ppd.Current ppd.ID -1
 

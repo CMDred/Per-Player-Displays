@@ -16,9 +16,9 @@ scoreboard objectives remove ppd
 scoreboard objectives remove ppd.ViewRange
 scoreboard objectives remove ppd.ViewRangeMultiplier
 scoreboard objectives remove ppd.ID
-scoreboard objectives remove ppd.Pos.0
-scoreboard objectives remove ppd.Pos.1
-scoreboard objectives remove ppd.Pos.2
+scoreboard objectives remove ppd.Pos.x
+scoreboard objectives remove ppd.Pos.y
+scoreboard objectives remove ppd.Pos.z
 
 scoreboard players reset #ppd
 scoreboard players reset #ppd.Init
